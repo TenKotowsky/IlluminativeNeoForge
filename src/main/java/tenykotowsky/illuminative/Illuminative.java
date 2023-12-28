@@ -24,6 +24,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
+import tenykotowsky.illuminative.block.ModBlocks;
 import tenykotowsky.illuminative.item.ModItems;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -42,6 +43,7 @@ public class Illuminative
         modEventBus.addListener(this::commonSetup);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         NeoForge.EVENT_BUS.register(this);
